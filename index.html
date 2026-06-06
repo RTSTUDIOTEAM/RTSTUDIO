@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RT STUDIO - Teknoloji Merkezi</title>
+    <title>RT STUDIO</title>
     <style>
         /* GENEL AYARLAR */
         body {
@@ -121,6 +121,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: 0.3s;
+            text-align: center;
         }
 
         .mor-buton:hover {
@@ -141,7 +142,7 @@
 
     <div class="ust-bolum">
         <div class="logo-kutu">RT STUDIO</div>
-        
+         
         <div class="ok-konteyner">
             <div class="ok-govde">
                 <span class="ok-metin">Ana Sayfa</span>
@@ -162,14 +163,14 @@
             Gönüllü ekipler ile çalıştığımız teknolojik programlar yapıyoruz. 
             Katkı sunmak için projeleri indirebilirsin!
         </p>
-        
+         
         <button class="mor-buton" onclick="sayfaDegistir('indirmeler')">
             İndirmelere Git --->
         </button>
     </div>
 
     <div id="indirmeler" class="sayfa-bolumu">
-        
+         
         <div class="proje">
             <div class="proje-baslik">KOMİK KİTAP v0.4.1:</div>
             <p class="proje-detay">Tamamen kullanışlı biraz akıllı bir yapay zeka.</p>
@@ -179,7 +180,7 @@
         <div class="proje">
             <div class="proje-baslik">XP-10 EDITION:</div>
             <p class="proje-detay">Windows XP üzerine kurulmuş bir Windows 10 projesi.</p>
-            <button onclick="xp10Uyarisi()" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">İndir ---></button>
+            <a href="https://drive.usercontent.google.com/download?id=1mTaPm9FHFawAXZhzAcoFQAKomRkDJ2Sn&export=download" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">İndir ---></a>
         </div>
 
         <div class="proje">
@@ -201,7 +202,7 @@
             for (var i = 0; i < sayfalar.length; i++) {
                 sayfalar[i].classList.remove('aktif');
             }
-            
+             
             document.getElementById(sayfaId).classList.add('aktif');
 
             var okMetni = document.querySelector('.ok-metin');
@@ -228,11 +229,7 @@
 
         // HAZIR OLMAYAN DOSYALAR İÇİN FONKSİYONLAR
         function komikKitapUyarisi() {
-            alert("Komik Kitap v0.4.1 henüz tamamlanmadı ve hazır değil.");
-        }
-
-        function xp10Uyarisi() {
-            alert("XP-10 EDITION (1,7 GB) şu anda buluta yükleniyor... Lütfen daha sonra tekrar deneyin.");
+            alert("Komik Kitap v0.4.1 şuan hazır değil. Lütfen daha sonra tekrar deneyin.");
         }
     </script>
 
