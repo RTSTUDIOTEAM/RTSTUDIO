@@ -155,6 +155,7 @@
         <a onclick="sayfaDegistir('ana-sayfa')">Ana Sayfa</a>
         <a onclick="sayfaDegistir('indirmeler')">İndirme</a>
         <a onclick="eskiSurumUyarisi()">Eski Sürümler</a>
+        <a onclick="sayfaDegistir('haberler')">Haberler</a>
         <a onclick="hakkindaUyarisi()">Hakkında</a>
     </div>
 
@@ -196,6 +197,74 @@
         </div>
     </div>
 
+    <div id="haberler" class="sayfa-bolumu">
+
+        <div class="proje">
+            <div class="proje-baslik" style="font-size: 26px; color: #cc0000;">🌲 RT STUDIO SUNAR: RT LAND 🌲</div>
+            <p class="proje-detay"><b>Ruwistar'dan sonra sırada macera var!</b></p>
+            <p class="proje-detay">
+                RT STUDIO olarak Ruwistar'da işletim sistemi simülasyonuyla sınırları zorladıktan sonra,
+                şimdi tamamen farklı bir alana adım atıyoruz: <b>RT Land</b>, TurboWarp'ta geliştirdiğimiz
+                yepyeni bir platform/aksiyon oyunu!
+            </p>
+        </div>
+
+        <div class="proje">
+            <div class="proje-baslik">🏃 Parkur Yeteneğin Kadar İyisin</div>
+            <p class="proje-detay">
+                RT Land'in kalbinde <b>parkur</b> var. Duvarlardan sekmek, boşluklara atlamak, hızını
+                kaybetmeden akıcı hareket etmek — her seviye seni sınırlarını zorlamaya davet ediyor.
+                Basit tuşlarla derin bir hareket sistemi kurmayı hedefliyoruz; kolay öğrenilir,
+                ustalaşması zaman alır.
+            </p>
+        </div>
+
+        <div class="proje">
+            <div class="proje-baslik">⚽ Sadece Koşmak Değil, Rekabet de Var</div>
+            <p class="proje-detay">
+                Parkurun yanında <b>spor modları</b> RT Land'in bir diğer büyük parçası. Botlara karşı
+                kısa, hızlı ve eğlenceli maçlar — RT Land'i tek oturuşluk bir oyundan çok, tekrar tekrar
+                dönülecek bir platforma dönüştürüyor.
+            </p>
+        </div>
+
+        <div class="proje">
+            <div class="proje-baslik">🌰 Kozalak: RT Land'in Ekonomisi</div>
+            <p class="proje-detay">
+                Oyunun para birimi <b>Kozalak</b>! Parkur bölümlerini tamamlayarak, spor modlarında
+                başarı göstererek ya da haritada gizlenmiş olanları toplayarak Kozalak kazanacaksın.
+                Peki bu Kozalaklar ne işe yarıyor?
+            </p>
+        </div>
+
+        <div class="proje">
+            <div class="proje-baslik">📦 Kutular: Şansını Dene</div>
+            <p class="proje-detay">
+                Biriktirdiğin Kozalaklarla <b>kutu</b> açabileceksin. İçlerinden kozmetik eşyalar,
+                karakter görünümleri ve daha fazlası çıkacak — RT Land dünyasında kendi tarzını
+                yaratmanın yolu burada.
+            </p>
+        </div>
+
+        <div class="proje">
+            <div class="proje-baslik">✨ Ve Daha Fazlası...</div>
+            <p class="proje-detay">
+                Bu sadece buzdağının görünen kısmı. RT Land için planladığımız içerikler bunlarla
+                sınırlı değil — geliştikçe daha fazla detay paylaşacağız.
+            </p>
+        </div>
+
+        <div class="proje">
+            <div class="proje-baslik">🔧 RT STUDIO Güvencesiyle</div>
+            <p class="proje-detay">
+                Ruwistar'da gösterdiğimiz özen ve yaratıcılık, RT Land'de de sürüyor. Takip etmeye
+                devam edin — çok yakında daha fazla bilgi geliyor!
+            </p>
+            <p class="proje-detay"><b>#RTLand #RTSTUDIO #TurboWarp</b></p>
+        </div>
+
+    </div>
+
     <script>
         function sayfaDegistir(sayfaId) {
             var sayfalar = document.getElementsByClassName('sayfa-bolumu');
@@ -211,6 +280,11 @@
                 document.querySelector('.ok-govde').style.borderColor = "#0099ff";
                 document.querySelector('.ok-ucu').style.borderLeftColor = "#0099ff";
                 okMetni.style.color = "#0099ff";
+            } else if(sayfaId === 'haberler') {
+                okMetni.innerText = "Haberler";
+                document.querySelector('.ok-govde').style.borderColor = "#cc0000";
+                document.querySelector('.ok-ucu').style.borderLeftColor = "#cc0000";
+                okMetni.style.color = "#cc0000";
             } else {
                 okMetni.innerText = "İndirme";
                 document.querySelector('.ok-govde').style.borderColor = "#00cc00";
