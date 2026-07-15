@@ -6,148 +6,32 @@
     <title>RT STUDIO</title>
     <style>
         /* GENEL AYARLAR */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #ffffff;
-        }
-
-        /* ÜST BÖLÜM (Logo ve Ok) */
-        .ust-bolum {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 900px;
-            margin-bottom: 20px;
-        }
-
-        .logo-kutu {
-            border: 4px solid #cc0000;
-            padding: 5px 15px;
-            color: #cc0000;
-            font-size: 32px;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        /* BÜYÜK OK */
-        .ok-konteyner {
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .ok-govde {
-            width: 180px;
-            height: 40px;
-            border: 3px solid #0099ff;
-            border-right: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .ok-ucu {
-            position: absolute;
-            right: -40px;
-            top: -12px;
-            width: 0;
-            height: 0;
-            border-top: 32px solid transparent;
-            border-bottom: 32px solid transparent;
-            border-left: 40px solid #0099ff;
-        }
-
-        .ok-ucu::after {
-            content: '';
-            position: absolute;
-            right: 8px;
-            top: -28px;
-            border-top: 28px solid transparent;
-            border-bottom: 28px solid transparent;
-            border-left: 35px solid #ffffff;
-        }
-
-        .ok-metin {
-            color: #0099ff;
-            font-weight: bold;
-            font-size: 20px;
-            text-decoration: underline;
-        }
-
-        /* MENÜ */
-        .menu {
-            margin-bottom: 40px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .menu a {
-            color: #000;
-            text-decoration: underline;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* SAYFA BÖLÜMLERİ */
-        .sayfa-bolumu {
-            display: none;
-        }
-
-        .aktif {
-            display: block;
-        }
-
-        /* ANA SAYFA İÇERİĞİ */
-        .ana-sayfa-metin {
-            font-size: 20px;
-            line-height: 1.5;
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
-
-        /* BUTONLAR */
-        .mor-buton {
-            display: inline-block;
-            background-color: #9b4d96;
-            color: #000;
-            padding: 15px 40px;
-            border: 3px solid #808080;
-            border-radius: 25px;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            text-align: center;
-        }
-
-        .mor-buton:hover {
-            background-color: #ba55d3;
-        }
-
-        /* PROJE LİSTESİ */
-        .proje {
-            margin-bottom: 35px;
-        }
-
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #ffffff; }
+        .ust-bolum { display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin-bottom: 20px; }
+        .logo-kutu { border: 4px solid #cc0000; padding: 5px 15px; color: #cc0000; font-size: 32px; font-weight: bold; display: inline-block; }
+        .ok-konteyner { display: flex; align-items: center; position: relative; }
+        .ok-govde { width: 180px; height: 40px; border: 3px solid #0099ff; border-right: none; display: flex; align-items: center; justify-content: center; position: relative; }
+        .ok-ucu { position: absolute; right: -40px; top: -12px; width: 0; height: 0; border-top: 32px solid transparent; border-bottom: 32px solid transparent; border-left: 40px solid #0099ff; }
+        .ok-ucu::after { content: ''; position: absolute; right: 8px; top: -28px; border-top: 28px solid transparent; border-bottom: 28px solid transparent; border-left: 35px solid #ffffff; }
+        .ok-metin { color: #0099ff; font-weight: bold; font-size: 20px; text-decoration: underline; }
+        .menu { margin-bottom: 40px; display: flex; gap: 20px; }
+        .menu a { color: #000; text-decoration: underline; font-size: 18px; cursor: pointer; }
+        .sayfa-bolumu { display: none; }
+        .aktif { display: block; }
+        .ana-sayfa-metin { font-size: 20px; line-height: 1.5; max-width: 600px; margin-bottom: 40px; }
+        .mor-buton { display: inline-block; background-color: #9b4d96; color: #000; padding: 15px 40px; border: 3px solid #808080; border-radius: 25px; text-decoration: none; font-size: 20px; font-weight: bold; cursor: pointer; transition: 0.3s; text-align: center; }
+        .mor-buton:hover { background-color: #ba55d3; }
+        .proje { margin-bottom: 35px; }
         .proje-baslik { font-weight: bold; font-size: 18px; }
         .proje-detay { margin: 5px 0 12px 0; font-size: 16px; }
-
     </style>
 </head>
 <body>
 
     <div class="ust-bolum">
         <div class="logo-kutu">RT STUDIO</div>
-         
         <div class="ok-konteyner">
-            <div class="ok-govde">
-                <span class="ok-metin">Ana Sayfa</span>
-                <div class="ok-ucu"></div>
-            </div>
+            <div class="ok-govde"><span class="ok-metin">Ana Sayfa</span><div class="ok-ucu"></div></div>
         </div>
     </div>
 
@@ -160,36 +44,32 @@
     </div>
 
     <div id="ana-sayfa" class="sayfa-bolumu aktif">
-        <p class="ana-sayfa-metin">
-            Gönüllü ekipler ile çalıştığımız teknolojik programlar yapıyoruz. 
-            Katkı sunmak için projeleri indirebilirsin!
-        </p>
-         
-        <button class="mor-buton" onclick="sayfaDegistir('indirmeler')">
-            İndirmelere Git --->
-        </button>
+        <p class="ana-sayfa-metin">Gönüllü ekipler ile çalıştığımız teknolojik programlar yapıyoruz. Katkı sunmak için projeleri indirebilirsin!</p>
+        <button class="mor-buton" onclick="sayfaDegistir('indirmeler')">İndirmelere Git ---></button>
     </div>
 
     <div id="indirmeler" class="sayfa-bolumu">
-         
         <div class="proje">
             <div class="proje-baslik">Ruwistar:</div>
             <p class="proje-detay">Dışa Bağımlılığı Azaltmaya Çalışan İşletim Sistemimiz.</p>
-            <a href="https://drive.usercontent.google.com/u/0/uc?id=1quhB-B2E4SvSp3hhG4qrkbOwX17kWbDB&export=download" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A425 İndir ---></a>
+            <div style="display: flex; gap: 15px; align-items: flex-end;">
+                <a href="https://rtstudioteam.github.io/RuwistarA425/" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A425 Dene ---></a>
+                <div style="text-align: center;">
+                    <div style="color: #ffd700; font-weight: bold; font-size: 14px; margin-bottom: 2px;">Tavsiye Edilen</div>
+                    <a href="https://rtstudioteam.github.io/RuwistarA426/" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A426 Dene ---></a>
+                </div>
+            </div>
         </div>
-
         <div class="proje">
             <div class="proje-baslik">XP-10 EDITION:</div>
             <p class="proje-detay">Windows XP üzerine kurulmuş bir Windows 10 projesi.</p>
             <a href="https://drive.usercontent.google.com/download?id=1mTaPm9FHFawAXZhzAcoFQAKomRkDJ2Sn&export=download" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">İndir ---></a>
         </div>
-
         <div class="proje">
             <div class="proje-baslik">IE 12 (Fan):</div>
             <p class="proje-detay">Fan bir Internet Explorer 12. Bunun Microsoft'la HİÇBİR ilgisi yoktur.</p>
             <a href="https://ia902907.us.archive.org/30/items/ie-12-v-0.1.1_202606/IE%2012%20v0.1.1.rar" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">İndir ---></a>
         </div>
-
         <div class="proje">
             <div class="proje-baslik">Çok Normal Bir Hesap Makinesi:</div>
             <p class="proje-detay">Sence gerçekten normal mi?</p>
@@ -198,109 +78,48 @@
     </div>
 
     <div id="haberler" class="sayfa-bolumu">
-
         <div class="proje">
-            <div class="proje-baslik" style="font-size: 26px; color: #cc0000;">🌲 RT STUDIO SUNAR: RT LAND 🌲</div>
-            <p class="proje-detay"><b>Ruwistar'dan sonra sırada macera var!</b></p>
-            <p class="proje-detay">
-                RT STUDIO olarak Ruwistar'da işletim sistemi simülasyonuyla sınırları zorladıktan sonra,
-                şimdi tamamen farklı bir alana adım atıyoruz: <b>RT Land</b>, TurboWarp'ta geliştirdiğimiz
-                yepyeni bir platform/aksiyon oyunu!
-            </p>
+            <div class="proje-baslik" style="font-size: 24px; color: #cc0000;">🚀 YENİ BOMBA RUWISTAR SÜRÜMÜ: ALPHA 426!</div>
+            <p class="proje-detay">15 Temmuz Saat 15:00'te Ruwistar A426 resmen çığır açtı! Yepyeni çıkmış olan Ruwistar A426 sadece bir yama değil ÇOOOK daha fazlası:</p>
+            <ul>
+                <li>Mükemmel düzeyde 2 yeni efektimiz,</li>
+                <li>2 Yeni Multimedya uygulamamız,</li>
+                <li>Hata Düzeltmeleri,</li>
+                <li>VE ÇOK DAHA FAZLASI!</li>
+            </ul>
+            <p class="proje-detay">Hadi ne bekliyorsun, Ruwistar A426'ya şimdi bedava gel!</p>
         </div>
-
-        <div class="proje">
-            <div class="proje-baslik">🏃 Parkur Yeteneğin Kadar İyisin</div>
-            <p class="proje-detay">
-                RT Land'in kalbinde <b>parkur</b> var. Duvarlardan sekmek, boşluklara atlamak, hızını
-                kaybetmeden akıcı hareket etmek — her seviye seni sınırlarını zorlamaya davet ediyor.
-                Basit tuşlarla derin bir hareket sistemi kurmayı hedefliyoruz; kolay öğrenilir,
-                ustalaşması zaman alır.
-            </p>
-        </div>
-
-        <div class="proje">
-            <div class="proje-baslik">⚽ Sadece Koşmak Değil, Rekabet de Var</div>
-            <p class="proje-detay">
-                Parkurun yanında <b>spor modları</b> RT Land'in bir diğer büyük parçası. Botlara karşı
-                kısa, hızlı ve eğlenceli maçlar — RT Land'i tek oturuşluk bir oyundan çok, tekrar tekrar
-                dönülecek bir platforma dönüştürüyor.
-            </p>
-        </div>
-
-        <div class="proje">
-            <div class="proje-baslik">🌰 Kozalak: RT Land'in Ekonomisi</div>
-            <p class="proje-detay">
-                Oyunun para birimi <b>Kozalak</b>! Parkur bölümlerini tamamlayarak, spor modlarında
-                başarı göstererek ya da haritada gizlenmiş olanları toplayarak Kozalak kazanacaksın.
-                Peki bu Kozalaklar ne işe yarıyor?
-            </p>
-        </div>
-
-        <div class="proje">
-            <div class="proje-baslik">📦 Kutular: Şansını Dene</div>
-            <p class="proje-detay">
-                Biriktirdiğin Kozalaklarla <b>kutu</b> açabileceksin. İçlerinden kozmetik eşyalar,
-                karakter görünümleri ve daha fazlası çıkacak — RT Land dünyasında kendi tarzını
-                yaratmanın yolu burada.
-            </p>
-        </div>
-
-        <div class="proje">
-            <div class="proje-baslik">✨ Ve Daha Fazlası...</div>
-            <p class="proje-detay">
-                Bu sadece buzdağının görünen kısmı. RT Land için planladığımız içerikler bunlarla
-                sınırlı değil — geliştikçe daha fazla detay paylaşacağız.
-            </p>
-        </div>
-
-        <div class="proje">
-            <div class="proje-baslik">🔧 RT STUDIO Güvencesiyle</div>
-            <p class="proje-detay">
-                Ruwistar'da gösterdiğimiz özen ve yaratıcılık, RT Land'de de sürüyor. Takip etmeye
-                devam edin — çok yakında daha fazla bilgi geliyor!
-            </p>
-            <p class="proje-detay"><b>#RTLand #RTSTUDIO #TurboWarp</b></p>
-        </div>
-
     </div>
 
     <script>
         function sayfaDegistir(sayfaId) {
             var sayfalar = document.getElementsByClassName('sayfa-bolumu');
-            for (var i = 0; i < sayfalar.length; i++) {
-                sayfalar[i].classList.remove('aktif');
-            }
-             
+            for (var i = 0; i < sayfalar.length; i++) { sayfalar[i].classList.remove('aktif'); }
             document.getElementById(sayfaId).classList.add('aktif');
 
             var okMetni = document.querySelector('.ok-metin');
+            var okGovde = document.querySelector('.ok-govde');
+            var okUcu = document.querySelector('.ok-ucu');
+
             if(sayfaId === 'ana-sayfa') {
                 okMetni.innerText = "Ana Sayfa";
-                document.querySelector('.ok-govde').style.borderColor = "#0099ff";
-                document.querySelector('.ok-ucu').style.borderLeftColor = "#0099ff";
+                okGovde.style.borderColor = "#0099ff";
+                okUcu.style.borderLeftColor = "#0099ff";
                 okMetni.style.color = "#0099ff";
             } else if(sayfaId === 'haberler') {
                 okMetni.innerText = "Haberler";
-                document.querySelector('.ok-govde').style.borderColor = "#cc0000";
-                document.querySelector('.ok-ucu').style.borderLeftColor = "#cc0000";
+                okGovde.style.borderColor = "#cc0000";
+                okUcu.style.borderLeftColor = "#cc0000";
                 okMetni.style.color = "#cc0000";
             } else {
                 okMetni.innerText = "İndirme";
-                document.querySelector('.ok-govde').style.borderColor = "#00cc00";
-                document.querySelector('.ok-ucu').style.borderLeftColor = "#00cc00";
+                okGovde.style.borderColor = "#00cc00";
+                okUcu.style.borderLeftColor = "#00cc00";
                 okMetni.style.color = "#00cc00";
             }
         }
-
-        function eskiSurumUyarisi() {
-            alert("Eski Sürüm Bulunamadı...");
-        }
-
-        function hakkindaUyarisi() {
-            alert("2026 RT STUDIO ®");
-        }
+        function eskiSurumUyarisi() { alert("Eski Sürüm Bulunamadı..."); }
+        function hakkindaUyarisi() { alert("2026 RT STUDIO ®"); }
     </script>
-
 </body>
 </html>
