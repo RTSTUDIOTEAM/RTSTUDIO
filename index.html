@@ -38,7 +38,7 @@
     <div class="menu">
         <a onclick="sayfaDegistir('ana-sayfa')">Ana Sayfa</a>
         <a onclick="sayfaDegistir('indirmeler')">İndirme</a>
-        <a onclick="eskiSurumUyarisi()">Eski Sürümler</a>
+        <a onclick="sayfaDegistir('eski-surumler')">Eski Sürümler</a>
         <a onclick="sayfaDegistir('haberler')">Haberler</a>
         <a onclick="hakkindaUyarisi()">Hakkında</a>
     </div>
@@ -53,10 +53,10 @@
             <div class="proje-baslik">Ruwistar:</div>
             <p class="proje-detay">Dışa Bağımlılığı Azaltmaya Çalışan İşletim Sistemimiz.</p>
             <div style="display: flex; gap: 15px; align-items: flex-end;">
-                <a href="https://rtstudioteam.github.io/RuwistarA425/" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A425 Dene ---></a>
+                <a href="https://rtstudioteam.github.io/RuwistarA426/" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A426 Dene ---></a>
                 <div style="text-align: center;">
                     <div style="color: #ffd700; font-weight: bold; font-size: 14px; margin-bottom: 2px;">Tavsiye Edilen</div>
-                    <a href="https://rtstudioteam.github.io/RuwistarA426/" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A426 Dene ---></a>
+                    <a href="https://rtstudioteam.github.io/RuwistarA427/" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A427 Dene ---></a>
                 </div>
             </div>
         </div>
@@ -77,17 +77,25 @@
         </div>
     </div>
 
+    <div id="eski-surumler" class="sayfa-bolumu">
+        <div class="proje">
+            <div class="proje-baslik">Ruwistar A425:</div>
+            <p class="proje-detay">Serinin eski sürümlerinden biri.</p>
+            <a href="https://rtstudioteam.github.io/RuwistarA425/" class="mor-buton" style="padding: 10px 25px; font-size: 18px;">A425 Dene ---></a>
+        </div>
+    </div>
+
     <div id="haberler" class="sayfa-bolumu">
         <div class="proje">
-            <div class="proje-baslik" style="font-size: 24px; color: #cc0000;">🚀 YENİ BOMBA RUWISTAR SÜRÜMÜ: ALPHA 426!</div>
-            <p class="proje-detay">15 Temmuz Saat 15:00'te Ruwistar A426 resmen çığır açtı! Yepyeni çıkmış olan Ruwistar A426 sadece bir yama değil ÇOOOK daha fazlası:</p>
+            <div class="proje-baslik" style="font-size: 24px; color: #cc0000;">🚀 YENİ BOMBA RUWISTAR SÜRÜMÜ: ALPHA 427!</div>
+            <p class="proje-detay">Ruwistar A427 resmi olarak yayında! Bu sürümle birlikte gelen yenilikler:</p>
             <ul>
-                <li>Mükemmel düzeyde 2 yeni efektimiz,</li>
-                <li>2 Yeni Multimedya uygulamamız,</li>
-                <li>Hata Düzeltmeleri,</li>
-                <li>VE ÇOK DAHA FAZLASI!</li>
+                <li>Yepyeni Store sistemi sisteme entegre edildi,</li>
+                <li>Can sıkıcı buglar ve hatalar temizlendi,</li>
+                <li>Kullanım deneyimi daha kolay ve akıcı hale getirildi,</li>
+                <li>VE DAHA FAZLASI!</li>
             </ul>
-            <p class="proje-detay">Hadi ne bekliyorsun, Ruwistar A426'ya şimdi bedava gel!</p>
+            <p class="proje-detay">Hadi ne duruyorsun, A427'yi hemen dene!</p>
         </div>
     </div>
 
@@ -111,6 +119,11 @@
                 okGovde.style.borderColor = "#cc0000";
                 okUcu.style.borderLeftColor = "#cc0000";
                 okMetni.style.color = "#cc0000";
+            } else if(sayfaId === 'eski-surumler') {
+                okMetni.innerText = "Eski Sürümler";
+                okGovde.style.borderColor = "#ffd700";
+                okUcu.style.borderLeftColor = "#ffd700";
+                okMetni.style.color = "#ffd700";
             } else {
                 okMetni.innerText = "İndirme";
                 okGovde.style.borderColor = "#00cc00";
@@ -118,7 +131,6 @@
                 okMetni.style.color = "#00cc00";
             }
         }
-        function eskiSurumUyarisi() { alert("Eski Sürüm Bulunamadı..."); }
         function hakkindaUyarisi() { alert("2026 RT STUDIO ®"); }
     </script>
 </body>
